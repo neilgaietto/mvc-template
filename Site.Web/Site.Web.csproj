@@ -20,6 +20,8 @@
     <IISExpressAnonymousAuthentication />
     <IISExpressWindowsAuthentication />
     <IISExpressUseClassicPipelineMode />
+    <Use64BitIISExpress />
+    <UseGlobalApplicationHostFile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -108,6 +110,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controllers\FormController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -138,6 +141,10 @@
     <ProjectReference Include="..\Site.Domain\Site.Domain.csproj">
       <Project>{8b369bbc-6b72-4764-8a0f-41e549f610a0}</Project>
       <Name>Site.Domain</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Site.Models\Site.Models.csproj">
+      <Project>{4762a5c1-ee70-413a-ab07-efcb97007de9}</Project>
+      <Name>Site.Models</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
